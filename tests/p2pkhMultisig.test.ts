@@ -1,5 +1,5 @@
 import { expect, use } from 'chai'
-import { Addr, bsv, FixedArray, sha256, toByteString } from 'scrypt-ts'
+import { Addr, bsv, FixedArray, toByteString } from 'scrypt-ts'
 import { P2pkhMultisig } from '../src/contracts/p2pkhMultisig'
 import { getDefaultSigner } from './utils/txHelper'
 import chaiAsPromised from 'chai-as-promised'
@@ -11,7 +11,6 @@ const priv2 = bsv.PrivateKey.fromRandom()
 const add1 = priv1.toAddress()
 const add2 = priv2.toAddress()
 
-const M = 2
 const N = 2
 
 const addresses: FixedArray<Addr, typeof N> = [
